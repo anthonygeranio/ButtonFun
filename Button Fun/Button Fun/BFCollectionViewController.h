@@ -10,13 +10,5 @@
 
 @interface BFCollectionViewController : UICollectionViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
-/**
- *  Generates a random color to use in our color views.
- *
- * @return randomColor     A random color.
- *
- */
-- (UIColor *)randomColor;
-
 @end
 

@@ -15,6 +15,7 @@
 		5A9F7AE51B83FB71007C9869 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A9F7AE31B83FB71007C9869 /* LaunchScreen.xib */; };
 		5A9F7AF11B83FB71007C9869 /* Button_FunTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F7AF01B83FB71007C9869 /* Button_FunTests.m */; };
 		5A9F7AFE1B8403C8007C9869 /* BFCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F7ADC1B83FB71007C9869 /* BFCollectionViewController.m */; };
+		5AA833321B840C0F008C6F3A /* UIColor+BFRandomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA833311B840C0F008C6F3A /* UIColor+BFRandomColor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,8 @@
 		5A9F7AEA1B83FB71007C9869 /* Button FunTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Button FunTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A9F7AEF1B83FB71007C9869 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A9F7AF01B83FB71007C9869 /* Button_FunTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Button_FunTests.m; sourceTree = "<group>"; };
+		5AA833301B840C0F008C6F3A /* UIColor+BFRandomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+BFRandomColor.h"; sourceTree = "<group>"; };
+		5AA833311B840C0F008C6F3A /* UIColor+BFRandomColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+BFRandomColor.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,13 +85,13 @@
 		5A9F7AD31B83FB71007C9869 /* Button Fun */ = {
 			isa = PBXGroup;
 			children = (
+				5A9F7B001B840BDF007C9869 /* Controllers */,
+				5A9F7B011B840BE5007C9869 /* Categories */,
 				5A9F7AD81B83FB71007C9869 /* AppDelegate.h */,
 				5A9F7AD91B83FB71007C9869 /* AppDelegate.m */,
-				5A9F7ADB1B83FB71007C9869 /* BFCollectionViewController.h */,
-				5A9F7ADC1B83FB71007C9869 /* BFCollectionViewController.m */,
 				5A9F7ADE1B83FB71007C9869 /* Main.storyboard */,
-				5A9F7AE11B83FB71007C9869 /* Images.xcassets */,
 				5A9F7AE31B83FB71007C9869 /* LaunchScreen.xib */,
+				5A9F7AE11B83FB71007C9869 /* Images.xcassets */,
 				5A9F7AD41B83FB71007C9869 /* Supporting Files */,
 			);
 			path = "Button Fun";
@@ -118,6 +121,24 @@
 				5A9F7AEF1B83FB71007C9869 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5A9F7B001B840BDF007C9869 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5A9F7ADB1B83FB71007C9869 /* BFCollectionViewController.h */,
+				5A9F7ADC1B83FB71007C9869 /* BFCollectionViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		5A9F7B011B840BE5007C9869 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				5AA833301B840C0F008C6F3A /* UIColor+BFRandomColor.h */,
+				5AA833311B840C0F008C6F3A /* UIColor+BFRandomColor.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +243,7 @@
 			files = (
 				5A9F7ADD1B83FB71007C9869 /* BFCollectionViewController.m in Sources */,
 				5A9F7ADA1B83FB71007C9869 /* AppDelegate.m in Sources */,
+				5AA833321B840C0F008C6F3A /* UIColor+BFRandomColor.m in Sources */,
 				5A9F7AD71B83FB71007C9869 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,6 +442,7 @@
 				5A9F7AF61B83FB71007C9869 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5A9F7AF71B83FB71007C9869 /* Build configuration list for PBXNativeTarget "Button FunTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +451,7 @@
 				5A9F7AF91B83FB71007C9869 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

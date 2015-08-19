@@ -7,6 +7,7 @@
 //
 
 #import "BFCollectionViewController.h"
+#import "UIColor+BFRandomColor.h"
 
 static NSString * const BFCollectionViewControllerCellReuseIdentifier = @"BFCollectionViewCell";
 
@@ -27,7 +28,7 @@ static NSString * const BFCollectionViewControllerCellReuseIdentifier = @"BFColl
     
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:BFCollectionViewControllerCellReuseIdentifier
                                                                            forIndexPath:indexPath];
-    cell.backgroundColor = [self randomColor];
+    cell.backgroundColor = [UIColor generateRandomColor];
     
     return cell;
 }
@@ -35,16 +36,7 @@ static NSString * const BFCollectionViewControllerCellReuseIdentifier = @"BFColl
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
     UICollectionViewCell *selectedCell = [collectionView cellForItemAtIndexPath:indexPath];
-    selectedCell.backgroundColor = [self randomColor];
-}
-
-#pragma mark - Random Color
-
-- (UIColor *)randomColor {
-    return [UIColor colorWithRed:arc4random()%256/256.0
-                           green:arc4random()%256/256.0
-                            blue:arc4random()%256/256.0
-                           alpha:1];
+    selectedCell.backgroundColor = [UIColor generateRandomColor];
 }
 
 #pragma mark - View Lifecycle
