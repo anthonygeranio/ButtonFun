@@ -9,6 +9,7 @@
 #import "BFCollectionViewController.h"
 #import "UIColor+BFRandomColor.h"
 
+static NSInteger BFCollectionViewControllerTimerLength = 10;
 static NSString * const BFCollectionViewControllerCellReuseIdentifier = @"BFCollectionViewCell";
 
 @interface BFCollectionViewController ()
@@ -17,7 +18,7 @@ static NSString * const BFCollectionViewControllerCellReuseIdentifier = @"BFColl
 
 @implementation BFCollectionViewController
 
-#pragma mark - UICollectionView
+#pragma mark - UICollectionView Setup
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
@@ -39,11 +40,23 @@ static NSString * const BFCollectionViewControllerCellReuseIdentifier = @"BFColl
     selectedCell.backgroundColor = [UIColor generateRandomColor];
 }
 
+#pragma mark - Shuffle All Color Views
+
+- (void)shuffleAllColorViews {
+    [self.collectionView reloadData];
+}
+
 #pragma mark - View Lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    [NSTimer scheduledTimerWithTimeInterval:BFCollectionViewControllerTimerLength
+                                     target:self
+                                   selector:@selector(shuffleAllColorViews)
+                                   userInfo:nil
+                                    repeats:YES];
 }
 
 - (void)didReceiveMemoryWarning {
