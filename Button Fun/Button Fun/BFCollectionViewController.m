@@ -10,6 +10,8 @@
 #import "UIColor+BFRandomColor.h"
 
 static NSUInteger BFCollectionViewControllerTimerLength = 10;
+
+static NSUInteger BFCollectionViewControllerCellSize = 40;
 static NSString * const BFCollectionViewControllerCellReuseIdentifier = @"BFCollectionViewCell";
 
 @interface BFCollectionViewController ()
@@ -22,7 +24,7 @@ static NSString * const BFCollectionViewControllerCellReuseIdentifier = @"BFColl
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
-    return ((collectionView.frame.size.height / 40) + 1 ) * ((collectionView.frame.size.width / 40) + 1);
+    return ((collectionView.frame.size.height / BFCollectionViewControllerCellSize) + 1 ) * ((collectionView.frame.size.width / BFCollectionViewControllerCellSize) + 1);
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
