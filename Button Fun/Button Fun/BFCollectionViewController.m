@@ -42,7 +42,7 @@ static NSString * const BFCollectionViewControllerCellReuseIdentifier = @"BFColl
 
 #pragma mark - Shuffle All Color Views
 
-- (void)shuffleAllColorViews {
+- (void)shuffleAllColorViews:(id)sender {
     [self.collectionView reloadData];
 }
 
@@ -54,7 +54,7 @@ static NSString * const BFCollectionViewControllerCellReuseIdentifier = @"BFColl
     
     [NSTimer scheduledTimerWithTimeInterval:BFCollectionViewControllerTimerLength
                                      target:self
-                                   selector:@selector(shuffleAllColorViews)
+                                   selector:@selector(shuffleAllColorViews:)
                                    userInfo:nil
                                     repeats:YES];
 }
