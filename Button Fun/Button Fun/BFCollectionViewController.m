@@ -9,7 +9,7 @@
 #import "BFCollectionViewController.h"
 #import "UIColor+BFRandomColor.h"
 
-static NSInteger BFCollectionViewControllerTimerLength = 10;
+static NSUInteger BFCollectionViewControllerTimerLength = 10;
 static NSString * const BFCollectionViewControllerCellReuseIdentifier = @"BFCollectionViewCell";
 
 @interface BFCollectionViewController ()
